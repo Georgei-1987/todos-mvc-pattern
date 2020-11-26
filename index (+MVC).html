@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Template • TodoMVC</title>
+		<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
+		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+		<!-- CSS overrides - remove if you don't need it -->
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+		<section class="todoapp">
+			<header class="header">
+				<h1>todos</h1>
+				<input class="new-todo" placeholder="What needs to be done?" autofocus>
+			</header>
+			<!-- This section should be hidden by default and shown when there are todos -->
+			<section class="main">
+				<input id="toggle-all" class="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark all as complete</label>
+				<ul class="todo-list">
+					<!-- These are here just to show the structure of the list items -->
+					<!-- Они здесь только для того, чтобы показать структуру элементов списка -->
+					<!-- List items should get the class `editing` when editing and `completed` when marked as completed -->
+					<!-- Элементы списка должны получить класс `editing` при редактировании и `completed`, если они помечены как завершенные -->
+					<!--
+					<li class="completed">
+						<div class="view">
+							<input class="toggle" type="checkbox" checked>
+							<label>Taste JavaScript</label>
+							<button class="destroy"></button>
+						</div>
+						<input class="edit" value="Create a TodoMVC template">
+					</li>
+					
+					<li>
+						<div class="view">
+							<input class="toggle" type="checkbox">
+							<label>Buy a unicorn</label>
+							<button class="destroy"></button>
+						</div>
+						<input class="edit" value="Rule the web">
+					</li>
+					-->
+				</ul>
+			</section>
+			<!-- This footer should hidden by default and shown when there are todos -->
+			<footer class="footer">
+				<!-- This should be `0 items left` by default -->
+				<span class="todo-count"><strong>0</strong> item left</span>
+				<!-- Remove this if you don't implement routing -->
+				<ul class="filters">
+					<li>
+						<a class="selected all" href="#/">All</a>
+					</li>
+					<li>
+						<a class="active" href="#/active">Active</a>
+					</li>
+					<li>
+						<a class="completed" href="#/completed">Completed</a>
+					</li>
+				</ul>
+				<!-- Hidden if no completed items are left ↓ -->
+				<!-- Скрыт, если не осталось готовых предметов -->
+				<button class="clear-completed">Clear completed</button>
+			</footer>
+		</section>
+		<!-- <label class="myLabel">Количество НЕзавершённых дел Count-Items</label>
+		<input id="myInput" class="myInput" style="margin-left: 21px">
+		</br></br>
+		<label class="myLabel">Количество завершённых дел Count-Toggle</label>
+		<input id="myInput_2" class="myInput_2" style="margin-left: 28px"> -->
+		<footer class="info">
+			<p>Double-click to edit a todo</p>
+			<!-- Remove the below line ↓ -->
+			<p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
+			<!-- Change this out with your name and url ↓ -->
+			<p>Created by <a href="http://todomvc.com">Georgei Novozenko</a></p>
+			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+		</footer>
+		<!-- Scripts here. Don't remove ↓ -->
+		<script src="node_modules/todomvc-common/base.js"></script>
+		<!-- <script src="js/app.js"></script> -->
+		
+		<script>
+			
+    		window.app = {
+
+		        model: {},
+
+		        view: {},
+
+		        controller: {}
+
+    		};
+
+    		document.querySelector('.main').hidden = false;
+
+    		// console.log(window);
+
+		</script>
+
+		<script src="js/model/todos.model.js"></script>
+
+		<script src="js/view/todos.view.js"></script>
+		<script src="js/view/new-todo.view.js"></script>
+
+		<script src="js/controller/app.controller.js"></script>
+		<script>
+
+		    app.controller.appController = new app.controller.AppController();
+		
+		</script>
+		</body>
+</html>
+					
